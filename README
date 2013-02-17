@@ -1,6 +1,8 @@
 This project is the first game I made in Python with the PyGame library.
-This game consists of the player (the red square), trying to collect the brown squares.
-The player must avoid enemies (purple squares) and can collect powerups (the green and blue squares)
+The game consists of the player (the red square), trying to collect the brown squares.
+The player must avoid enemies (purple squares) and can collect powerups (the green and blue squares).
 Once the player touches a enemy, the game is over and the score is displayed.
 The player can check their score at anytime in the top right corner.
-Once the game is over, the user must run the program again to play the game again.
+To restart the game, the user must close the window and re-run the program.
+
+To run this

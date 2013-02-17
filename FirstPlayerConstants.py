@@ -1,42 +1,51 @@
 #-------------------------------------------------------------------------------
-# Name:        module1
-# Purpose:
+# Name:        FirstPlayerConstants
+# Purpose:     This is the file that defines all of the constants used in the game
 #
-# Author:      Ivana
+# Author:      Marko Nerandzic
 #
 # Created:     25/12/2012
-# Copyright:   (c) Ivana 2012
-# Licence:     <your licence>
+# Copyright:   (c) Marko Nerandzic 2012
+# Licence:      This work is licensed under the Creative Commons Attribution-
+#               NonCommercial-NoDerivs 3.0 Unported License. To view a copy of
+#               this license, visit http://creativecommons.org/licenses/by-nd/3.0/.
 #-------------------------------------------------------------------------------
-#!/usr/bin/env python
 
-SPEEDUP = 1
-GROWUP = 2
+#Constants for power up types
+SPEED_UP = 1
+SHRINK_ENEMIES = 2
 
-SCREENHEIGHT = 400
-SCREENWIDTH = 500
+#Constants regarding the display
+SCREEN_HEIGHT = 400
+SCREEN_WIDTH = 500
 FPS = 30
 
-SQUAREHEIGHT = 50
-SQUAREWIDTH = 50
-SQUARESPEED = 2
+#Constants regarding the player
+PLAYER_HEIGHT = 50
+PLAYER_WIDTH = 50
+PLAYER_SPEED = 2
 DISTANCEPERMOVE = 10
 
-SPEEDHEIGHT = 30
-SPEEDWIDTH = 30
-POWERUPDURATION = 300
-POWERUPRESPAWNTICKS = 900
+#Constants regarding the powerup object
+POWERUP_HEIGHT = 30
+POWERUP_WIDTH = 30
+POWERUP_DURATION = 300
+POWERUP_RESPAWN_TICKS = 900
 
-POINTWIDTH = 15
-POINTHEIGHT = 15
+#Constants regarding the points object
+POINT_WIDTH = 15
+POINT_HEIGHT = 15
 
-ENEMYSPEED = 2
-ENEMYWIDTH = 80
-ENEMYHEIGHT = 80
+#Constants concerning enemies
+ENEMY_SPEED = 2
+ENEMY_WIDTH = 80
+ENEMY_HEIGHT = 80
 
-POWERUPENEMYHEIGHT = 40
-POWERUPENEMYWIDTH = 40
+#Constants for height and width for enemies after player gets shrinking powerup
+SHRUNKEN_ENEMY_HEIGHT = 40
+SHRUNKEN_ENEMY_WIDTH = 40
 
+#Colour constants
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 PURPLE = (233, 0, 255)
@@ -45,16 +54,18 @@ GREEN = (0, 255, 0)
 BROWN = (139, 69, 13)
 BLACK = (0, 0, 0)
 
-
+#Array holding which colour refers to which powerup type
 powerUpColours = [0]
 
 powerUpColours.append(BLUE)
 powerUpColours.append(GREEN)
 
+#Direction Constants
 UP = 1
 RIGHT = 2
 DOWN = 3
 LEFT = 4
 
-MINXDISTANCE = 30
-MINYDISTANCE = 30
+#Minimum distance a object can be created or moved from the player
+MIN_X_DISTANCE = 30
+MIN_Y_DISTANCE = 30
