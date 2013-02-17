@@ -4,5 +4,3 @@ The player must avoid enemies (purple squares) and can collect powerups (the gre
 Once the player touches a enemy, the game is over and the score is displayed.
 The player can check their score at anytime in the top right corner.
 To restart the game, the user must close the window and re-run the program.
-
-To run this
