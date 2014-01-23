@@ -22,6 +22,7 @@ class Inputs():
     downKeyPressed = False
     leftKeyPressed = False
     rightKeyPressed = False
+    mouseEvents = []
 
     #Initializes the move keys
     def __init__(self, upKey = K_UP, downKey = K_DOWN, leftKey = K_LEFT, rightKey = K_RIGHT):
@@ -30,8 +31,18 @@ class Inputs():
         self.moveLeftKey = leftKey
         self.moveRightKey = rightKey
 
-    #Goes through all of teh events that happened since last called and sets the appropriate variables to signal the change
+    #Resets the inputs to their default state
+    def resetInputs(self):
+        self.quitGame = False
+        self.upKeyPressed = False
+        self.downKeyPressed = False
+        self.leftKeyPressed = False
+        self.rightKeyPressed = False
+        self.mouseEvents = []
+
+    #Goes through all of the events that happened since last called and sets the appropriate variables to signal the change
     def update(self):
+        self.mouseEvents = []
         for event in pygame.event.get():
             #If the quit event occured, set the quitGame variable to be True
             if event.type == self.exit:
@@ -56,6 +67,8 @@ class Inputs():
                     self.leftKeyPressed = False
                 elif event.key == self.moveRightKey:
                     self.rightKeyPressed = False
+            elif event.type == MOUSEBUTTONUP:
+                self.mouseEvents.append(event)
 
     #Returns the information about any variable
     def getUpKeyPressed(self):
@@ -69,6 +82,9 @@ class Inputs():
 
     def getRightKeyPressed(self):
         return self.rightKeyPressed
+
+    def getMouseEvents(self):
+        return self.mouseEvents
 
     def getQuit(self):
         return self.quitGame
